@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Righteous', cursive;
+}
+
+::-webkit-scrollbar {
+    display: none;
+
+}
+
+body {
+    background-color: #232323;
+}
+
+.nav {
+    animation: down 1s;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    gap: 20vw;
+    grid-auto-flow: column;
+}
+
+@keyframes down {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.music {
+    padding-top: 30px;
+    position: absolute;
+    left: 30px;
+    display: none;
+}
+
+.music button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.music img {
+    width: 33px;
+    padding: 10px;
+}
+
+.musicoff {
+    padding-top: 30px;
+    position: absolute;
+    left: 30px;
+}
+
+.musicoff button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
+
+.musicoff img {
+    width: 33px;
+    padding: 10px;
+}
+
+/*----------------------------------------------------------------Active part-----------------------------------------------------------------------------*/
+
+
+.disc img.active {
+    animation-play-state: running;
+}
+
+
+
+/*----------------------------------------------------------------Active part-----------------------------------------------------------------------------*/
+
+
+.logo {
+
+    margin-top: -100px;
+}
+
+.social {
+    position: absolute;
+    padding-top: 30px;
+    right: 30px;
+}
+
+.social ul {
+    list-style: none;
+    display: flex;
+
+}
+
+.social ul li {
+    padding: 10px;
+    font-size: 33px;
+
+}
+
+.social ul li a {
+    color: white;
+    transition: .5s;
+}
+
+.social ul li a:hover {
+    color: bisque;
+}
+
+.links {
+    display: grid;
+    justify-content: center;
+    margin-top: -100px;
+    z-index: 1;
+}
+
+.links ul {
+    display: flex;
+    list-style: none;
+
+}
+
+.links ul li {
+    padding-left: 50px;
+    font-size: 33px;
+
+
+    letter-spacing: 5px;
+}
+
+.links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.links ul li a:hover {
+    color: bisque;
+}
+
+#store {
+    animation: left 1s;
+}
+
+@keyframes left {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#con {
+    animation: right 1s;
+}
+
+@keyframes right {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.store {
+    margin-top: 50px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    animation: store 1s;
+}
+
+@keyframes store {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.out {
+    width:300px;
+    height: 300px;
+    border: 5px solid white;
+    display: grid;
+        justify-content: center;
+
+}
+
+.item {
+    transition: .5s;
+}
+
+
+.item:hover {
+    transform: scale(1.1);
+}
+
+.detail {
+    display: flex;
+    width: 100%;
+}
+
+.detail .price {
+    width: 50%;
+    font-size: 30px;
+    margin-top: 10px;
+    color: white;
+}
+
+.detail .btn {
+    width: 50%;
+}
+
+.frame button {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    float: right;
+    width: 120px;
+    height: 40px;
+    background-color: transparent;
+    border: 5px solid white;
+    font-size: 20px;
+    color: white;
+    transition: .5s;
+    cursor: pointer;
+
+}
+
+.frame button:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.copyright {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    font-family: 'Righteous', cursive;
+    color: white;
+    text-align: center;
+    bottom: 20px;
+    animation: upc 1s;
+}
+
+@keyframes upc {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@media (max-width:1000px) {
+   
+     .store{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+     }
+     .frame
+     {
+        padding: 30px;
+     }
+     .out{
+        width:98%;
+        display: grid;
+        justify-content: center;
+    }
+    }
+
+
+
+@media only screen and (max-width:640px) {
+    .music img {
+        width: 10vw;
+    }
+
+    .musicoff img {
+        width: 10vw;
+
+    }
+
+    .social ul li {
+        font-size: 7vw;
+    }
+
+    .logo img {
+        width: 50vw;
+        margin-top: 100px;
+    }
+
+    .social {
+        width: 20vw;
+    }
+
+    .links {
+
+        margin-top: -40px;
+    }
+
+    .links ul li {
+        font-size: 5vw;
+        padding-left: 30px;
+    }
+
+    .store {
+        display: block;
+        gap: ‌0px;
+    }
+    .store .frame 
+    {
+        padding: 30px;
+    }
+    .out{
+        width:98%;
+        display: grid;
+        justify-content: center;
+    }
+}
+
+
